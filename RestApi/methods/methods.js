@@ -69,9 +69,9 @@ async function post(req, res, db){
     }
 }
 
-async function get(res){
-   const url = await db.findOne({url: req.url})
-   if(url === req.url){
+async function get(req, res, db){
+   const uri = await db.findOne({url: req.url})
+   if(uri.url === req.url){
     return fs.readFile("send.json", (err, data)=>{
         if(err){
             throw err;
