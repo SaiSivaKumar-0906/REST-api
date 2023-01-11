@@ -1,5 +1,6 @@
 const fs = require("node:fs");
 const url = require("node:url");
+const crypto = require('node:crypto');
 
 function writeFile(res, createFile, url){
     return fs.readFile("send.json", (err, datas)=>{
