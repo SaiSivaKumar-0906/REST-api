@@ -78,7 +78,7 @@ async function get(req, res, db){
         }
         if(!err){
             res.writeHead(200, {
-                "Content-Type": "applicaton/json"
+                "Content-Type": "application/json"
             })
             res.write(data);
             res.end();
